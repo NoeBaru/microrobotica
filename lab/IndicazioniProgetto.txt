@@ -1,0 +1,5 @@
+5 gruppi (3 da 4,2 da 5)
+Realizzare da zero il braccio/quello che vogliamo (con fusion, sketchup o altri programmi 3D)
+Ci sarà un responsabile
+Stampante 3D
+Sensori, motori, raspberry o Arduino
