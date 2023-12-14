@@ -1,0 +1,491 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* IMPOSTAZIONE PER LA BARRA DI SCORRIMENTO*/
+
+/*tolgo la barra iniziale*/
+::-webkit-scrollbar{
+  -webkit-appearance: none;
+}
+/*metto un nuovo colore di sfondo*/
+::-webkit-scrollbar-track{
+  background-color: #f0f0f0;
+}
+/*modifico colore e forma della barra*/
+::-webkit-scrollbar-thumb{ 
+  background-color: #0a9911;
+  border: 3px;
+}
+
+/*serve per impostare la larghezza di tutta la barra di scorrimento*/
+::-webkit-scrollbar:vertical{
+  width: 12px;
+}
+
+/* Stili per la navigazione */
+
+.nav{
+  top: 0;
+  display: inline;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+  header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px 10%;
+  background-color: #fff;
+}
+
+.logo{
+  max-width: 100%;
+  width: 120px;
+  padding: 0px 10px;
+  display: inline-block;
+  border: green solid 2px;
+}
+
+nav {
+    background-color: #ffff;
+    color: #fff;
+    padding: 0px 10px ;
+    display: block;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0px 20px ;
+    position: relative;
+    
+}
+nav li{
+    padding: 0px 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.fancy{
+    background-color: transparent;
+    border: 2px solid #0a9911;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 12px;
+   }
+
+   .fancy1{
+    background-color: transparent;
+    border: 2px solid #0a9911;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    margin-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 12px;
+   }
+   
+   .fancy1::before {
+    content: " ";
+    width: 25px;
+    height: 2px;
+    background: white;
+    top: 50%;
+    left: 24px;
+    position: absolute; 
+    transition: background 0.3s linear, width 0.3s linear;
+   }
+
+   .fancy::before {
+    content: " ";
+    width: 25px;
+    height: 2px;
+    background: #0a9911;
+    top: 50%;
+    left: 24px;
+    position: absolute; 
+    transition: background 0.3s linear, width 0.3s linear;
+   }
+   
+   .fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 30px;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0a9911;
+   }
+
+   .fancy1 .text1 {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 30px;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0a9911;
+   }
+   
+   .fancy .top-key {
+    height: 2px;
+    width: 30px;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #fff500;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-1 {
+    height: 2px;
+    width: 40px;
+    right: 30px;
+    bottom: -2px;
+    position: absolute;
+    background: #fff500;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #fff500;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy:hover {
+    color: white;
+    background: #0a9911;
+   }
+
+   .fancy1 {
+    background: #0a9911;
+   }
+   
+   .fancy:hover::before {
+    background: white;
+   }
+   
+   .fancy:hover .text {
+    color: white;
+   }
+
+   .fancy1 .text1 {
+    color: white;
+   }
+   
+   .fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+   }
+
+   .fancy1 .top-key1 {
+    left: -2px;
+    width: 0px;
+   }
+   
+    .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+   }
+
+   .fancy1 .bottom1-key-1,
+    .fancy1 .bottom1-key-2 {
+    right: 0;
+    width: 0;
+   }
+
+   /* The switch - the box around the slider */
+
+
+.tema{
+  margin-right: 10px;
+  border: green solid 2px;
+
+}
+.testo_tema{
+  display: block;
+  margin-left: 70px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+.switch {
+    font-size: 17px;
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    width: 3.5em;
+    height: 2em;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    --background: #0a9911;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+  }
+
+  /*bottone per il tema*/
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+  }
+  
+  input:checked + .slider {
+    background-color: #0a9911;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+  }
+
+/*stile per la linea che separa navbar da contenuto pagina*/
+.linea{
+  height: 2px;
+  background-color: #0a9911;
+  width: 100%;
+}
+
+
+
+/* Stili per il contenuto principale */
+main {
+    margin: 10%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+
+}
+
+p::selection{
+  background-color: #0a9911;
+  color: #fff;
+}
+
+
+.sezione{
+  position: relative;
+  z-index : 1;
+  width: 100%;
+  height: 100vh;
+}
+
+.sezione1{
+  position: relative;
+  z-index : 1;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.title{
+  color: #0a9911;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  text-align: left;
+  height: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  position: fixed;
+  top: 0; left:0;
+  margin-top: 25%;
+  margin-left: 25%;
+  transform: scale(1);
+  transition: all 1s cubic-bezier(.215, .61, .355, 1);
+  opacity: 0;
+  user-select: none;
+}
+.title1{
+  color: #0a9911;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  text-align: left;
+  height: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  position: fixed;
+  top: 0; left:0;
+  margin-top: 25%;
+  margin-left: 25%;
+  transform: scale(1);
+  transition: all 1s cubic-bezier(.215, .61, .355, 1);
+  opacity: 0;
+  user-select: none;
+}
+
+.testo{
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: justify;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  position: fixed;
+  top: 0; left:0;
+  margin-top: 10%;
+  margin-left: 25%;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+  opacity: 0;
+  user-select: none;
+}
+.testo1{
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: justify;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  position: fixed;
+  top: 0; left:0;
+  margin-top: 10%;
+  margin-left: 25%;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+  opacity: 0;
+  user-select: none;
+}
+
+
+.sezione.in-page .title,.sezione.in-page .testo, .sezione1.in-page .title1, .sezione1.in-page .testo1{
+  transform: scale(1.1);
+  opacity:1;
+}
+
+/* Stili per il piè di pagina */
+footer {
+    background-color: #0a99117e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/*STILI PER DISPOSITIVI PICCOLI(TELEFONI)*/
+
+@media(max-width: 1281px){
+
+  nav ul{
+    display: inline;
+    position: absolute;
+    top: 75px;
+    left: 0px;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    padding-top: 10px;
+    height: 0vh;
+    overflow: hidden;
+
+  }
+  nav li{
+    width: 100%;
+    padding: 3px;
+  }
+  .menu-open nav ul{
+    height:100vh;
+  }
+  .icona-hamburger{
+    align-items: center;
+    height: 50px;
+    padding-top: 3px;
+    border: green solid 2px;
+  }
+  .icona-hamburger span{
+    display: block;
+    height: 1px;
+    width: 30px;
+    background: #0a9911;
+    position: relative;
+    margin-top: 10px;
+  }
+
+}
