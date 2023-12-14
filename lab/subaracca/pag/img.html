@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--aggiungo pagine team(nome cognome e ruolo), codice (screem p ctrl+v del codice) e contatti (mail di tutti e 5 al click)-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Baruffolo, Pellegrino, Prandi, Rinaldi, Sciolla - 4^AROB">
+    <meta name="keywords" content="sito">
+    <title>SUBARACCA</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div class="nav">
+    <header>
+        <div class="logo">
+            <img src="../img/logoITIS.png" alt="immagine" width="100%">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a class="fancy1" href="../index.html">
+                        <span class="top-key1"></span>
+                        <span class="text1">home</span>
+                        <span class="bottom1-key-1"></span>
+                        <span class="bottom1-key-2"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="fancy" href="./team.html">
+                        <span class="top-key"></span>
+                        <span class="text">team</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="fancy" href="./codice.html">
+                        <span class="top-key"></span>
+                        <span class="text">codice</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="fancy" href="./img.html">
+                        <span class="top-key"></span>
+                        <span class="text">immagini</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+       
+    </header>
+    <div class="linea">
+    </div>
+</div>
+
+    <main>
+    
+        <div class="container">
+            <br><img class="img" src="../img/car.jpg" alt="immagine">
+        </div>
+
+        <div class="container">
+            <br><img class="img" src="../img/ROBOT03-02.png" alt="immagine">
+        </div>
+
+        <div class="container">
+            <br><img class="img" src="../img/carPezzi.png" alt="immagine">
+        </div>
+    </main>
+
+    <footer>
+        <p>4^AROB</p><p><br>BARUFFOLO, PELLEGRINO, PRANDI, RINALDI, SCIOLLA<br></p>
+        <br><p>SUBARACCA</p>
+    </footer>
+
+</body>
+
+</html>
+<script>
+
+    //PRELOADER
+    let loader = document.getElementById("preloader")
+    let loadimage = document.getElementById("preimage")
+
+    const sleep = (s) => {
+        return new Promise(resolve => setTimeout(resolve, (s * 1000)))
+    }
+
+    window.addEventListener("load", function () {
+        sleep(3.5).then(() => {
+            loadimage.style.opacity = "1";
+            sleep(1).then(() => {
+                loader.style.display = "none"
+                loadimage.style.opacity = "0";
+                loadimage.style.transition = "all 1.5s ease";
+                loader.style.zIndex = "0";
+                loadimage.style.zIndex = "0";
+            })
+        })
+    })
+
+//elements
+var elements_to_watch = document.querySelectorAll('.watch');
+
+//callback 
+var callback = function(items){
+  items.forEach((item) => {
+    if(item.isIntersecting){
+      item.target.classList.add("in-page");
+    } else{
+      item.target.classList.remove("in-page");
+    }
+  });
+}
+
+//observer
+var observer = new IntersectionObserver(callback, { threshold: 0.6 } );
+
+//apply
+elements_to_watch.forEach((element) => {
+  observer.observe(element); 
+});
+
+/*SCRIPT PER MENU SUL TELEFONO*/
+
+let item = document.querySelector('.icona-hamburger');
+item.addEventListener("click", function(){
+    document.body.classList.toggle('menu-open');
+});
+
+
+</script>
