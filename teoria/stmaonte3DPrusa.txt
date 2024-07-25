@@ -1,0 +1,22 @@
+Calibrazione Stampante3d PRUSA
+
+MODELLO PRUSA i3MK3
+
+Calibrazione della Stampante3D
+Calibrazione
+Test cinghie
+Trova origine
+Calibra xyz
+Poi togliere piastra
+Mettere foglio
+Quando sposta troppo il foglio spegnere stampante
+Rimettere piastra
+Piano smooth1 Z:-0.700/800
+Rifare calibrazione calibra primo strato
+Continua
+PLA
+Calibrazione 1’ strato
+Usare PET
+Temp pla
+Estensore 230/240 col chiari scuro 225/230
+Piano 70
